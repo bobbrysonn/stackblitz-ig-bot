@@ -34,9 +34,26 @@ const Unfollow = async (username: string) => {
   FollowingDb.findOneAndRemove(
     { username: username },
     function(err: any, follower: IFollower) {
-      let followed = new FollowHistoryDb({})
+      let followed = new FollowHistoryDb(follower);
+      return JSON.stringify({ 
+        message: "Added one follower to the followed list",
+        follower: followed
+      })
     }
   )
 }
 
-export { AddFollowing, GetFollowing };
+const InHistory = async (username: string) => {
+  FollowHistoryDb.findOne({ username: username }, function(err: any, follower: IFollower) {
+    if(err) {
+      console.error(err);
+    } else {
+      return JSON.stringify({
+        message: "Retrieved one user from the history",
+        follower: follower
+      })
+    }
+  })
+}
+
+export { AddFollowing, GetFollowing, Unfollow, InHistory };
