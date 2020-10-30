@@ -23,9 +23,11 @@
   "homepage": "https://github.com/bobbrysonn/stackblitz-ig-bot#readme",
   "devDependencies": {
     "@types/mongoose": "^5.7.36",
-    "typescript": "^4.0.5"
+    "typescript": "^4.0.5",
+    "@types/puppeteer": "^3.0.3"
   },
   "dependencies": {
-    "mongoose": "^5.10.11"
+    "mongoose": "^5.10.11",
+    "puppeteer": "^5.4.1"
   }
 }
