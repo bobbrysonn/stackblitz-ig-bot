@@ -1,4 +1,0 @@
-// Some configurations to make the project easier
-{
-  "MONGO_URL": "mongodb+srv://bobbrysonn:freelancer.com@cluster-one.dkbnl.mongodb.net/instagram?retryWrites=true&w=majority"
-}
